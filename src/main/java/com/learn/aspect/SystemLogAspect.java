@@ -30,22 +30,22 @@ public class SystemLogAspect {
     public void serviceAspect(){
     }
     /*前置通知*/
-    @Before("controllerAspect()")
+    /*@Before("controllerAspect()")
     public void doBefore(JoinPoint joinPoint){
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         HttpSession session = request.getSession();
         //读取session中的用户
         String ip = IPUtils.getIpAddr(request);
         try{
-            //*========控制台输出=========*//
+
             System.out.println("==============前置通知开始==============");
             System.out.println("请求接口" + (joinPoint.getTarget().getClass().getName() + "." + joinPoint.getSignature().getName()));
-            System.out.println("方法描述：" + getControllerMethodDescription(joinPoint));
+
             System.out.println("请求人：" + "test");
             System.out.println("请求ip：" + ip);
         }
 
-    }
+    }*/
 
 
 
